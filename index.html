@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#16a34a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Eurová Hra — vzdelávacia hra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/ui.css">
+  <link rel="stylesheet" href="styles/money.css">
+</head>
+<body data-screen="home">
+  <header class="app-header">
+    <button id="btn-back" class="icon-btn back-btn" hidden aria-label="Späť">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span data-i18n="back">Späť</span>
+    </button>
+    <h1 class="app-title"><span class="logo-emoji" aria-hidden="true">💶</span> <span data-i18n="appTitle">Eurová Hra</span></h1>
+    <button id="btn-settings" class="icon-btn settings-btn" aria-label="Nastavenia">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </header>
+
+  <main class="app">
+    <section id="screen-home" class="screen"></section>
+    <section id="screen-learn" class="screen"></section>
+    <section id="screen-test" class="screen"></section>
+    <section id="screen-cashier" class="screen"></section>
+    <section id="screen-story" class="screen"></section>
+    <section id="screen-results" class="screen"></section>
+  </main>
+
+  <div id="settings-modal" class="modal" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+      <header class="modal-header">
+        <h2 id="settings-title" data-i18n="settings">Nastavenia</h2>
+        <button class="icon-btn close-btn" data-close-modal aria-label="Zatvoriť">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </button>
+      </header>
+      <div class="modal-body">
+        <label class="setting-row">
+          <span data-i18n="language">Jazyk / Language</span>
+          <select id="setting-locale" class="select">
+            <option value="sk">Slovenčina</option>
+            <option value="en">English</option>
+          </select>
+        </label>
+        <label class="setting-row">
+          <span data-i18n="sound">Zvuk</span>
+          <input id="setting-sound" type="checkbox" class="checkbox" checked>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/money.js"></script>
+  <script src="scripts/catalog.js"></script>
+  <script src="scripts/i18n.js"></script>
+  <script src="scripts/storage.js"></script>
+  <script src="scripts/wallet.js"></script>
+  <script src="scripts/learn.js"></script>
+  <script src="scripts/test.js"></script>
+  <script src="scripts/cashier.js"></script>
+  <script src="scripts/story.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
