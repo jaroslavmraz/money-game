@@ -1,5 +1,11 @@
 # Eurová Hra — Money Game
 
+<p align="center">
+  <a href="https://jaroslavmraz.github.io/money-game/"><img src="https://img.shields.io/badge/%E2%96%B6%20SPUSTI%C5%A4%20HRU-2ea44f?style=for-the-badge" alt="▶ Spustiť hru" height="64"></a>
+</p>
+
+<p align="center"><b>▶ Hrať online / Play online:</b> <a href="https://jaroslavmraz.github.io/money-game/">https://jaroslavmraz.github.io/money-game/</a></p>
+
 Webová vzdelávacia hra, ktorá učí deti narábať s eurami — bankovkami a mincami, počítaním nákupu a výdavku. Funguje na tablete aj v PC prehliadači. Bez build kroku — len HTML, CSS a vanilla JS.
 
 A browser-based educational game that teaches kids to handle EUR cash — banknotes and coins, totals, and change. Runs on tablets and PCs. No build step — plain HTML, CSS and vanilla JS.
@@ -41,6 +47,7 @@ python3 -m http.server 8000
 git push
 # v repo nastaveniach: Settings → Pages → Source: main / root
 ```
+Po pár sekundách je hra dostupná na **https://jaroslavmraz.github.io/money-game/**.
 
 ## Štruktúra projektu
 
